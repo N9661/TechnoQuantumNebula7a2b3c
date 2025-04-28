@@ -5,7 +5,7 @@ local RbxAnalytics = game:GetService("RbxAnalyticsService")
 
 local function loadWhitelistData()
     local success, data = pcall(function()
-        return loadstring(game:HttpGet("https://raw.githubusercontent.com/N9661/TechnoQuantumNebula7a2b3c/refs/heads/main/Wwhitelist.lua"))()
+        return loadstring(game:HttpGet("https://raw.githubusercontent.com/N9661/TechnoQuantumNebula7a2b3c/refs/heads/main/Wwwhitelist.lua"))()
     end)
     
     if not success then
