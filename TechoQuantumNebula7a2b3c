@@ -55,8 +55,8 @@ local function _checkEnvironment()
     return true
 end
 
+-- Fixed whitelist data with proper line breaks
 local _7xQ9pL3mN5vR2bC8dE0fG = [[
-fba07e1-e7a1-e7a1-4082-ad2d-877b7094797b,HVX_Havoc,v1
 fba07e1-e7a1-e7a1-4082-ad2d-877b7094797b,HVX_Havoc,v1
 97bdec0f-b39b-473b-a7eb-cfdf0fd957a5,pro_gamerxm,v1
 ]]
@@ -102,20 +102,32 @@ function _xJ7qP2rS5tU8vW0zA3bC6dE9fG1hJ4kL:_v3R7fD9sA2qP5mN()
         return false
     end
     
+    -- Add debug output
+    print("Current user: " .. _c3)
+    print("Current ClientId: " .. _i4)
+    
     for _d5 in string.gmatch(_7xQ9pL3mN5vR2bC8dE0fG, "[^\r\n]+") do
-        local _v6, _u7, _checksum = _d5:match("([^,]+),([^,]+),([^,]+)")
-        
-        if _checksum ~= "v1" then
-            return false
-        end
-        
-        if _u7 == _c3 and _v6 == _i4 then
-            if #_u7 == #_c3 then
-                return true
+        if _d5 and _d5 ~= "" then
+            local _v6, _u7, _checksum = _d5:match("([^,]+),([^,]+),([^,]+)")
+            
+            -- Add debug output
+            print("Checking against: " .. tostring(_v6) .. ", " .. tostring(_u7))
+            
+            if _checksum ~= "v1" then
+                print("Checksum mismatch")
+                return false
+            end
+            
+            if _u7 == _c3 and _v6 == _i4 then
+                if #_u7 == #_c3 then
+                    print("User authorized!")
+                    return true
+                end
             end
         end
     end
     
+    print("No matching whitelist entry found")
     return false
 end
 
