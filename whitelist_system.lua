@@ -8,7 +8,7 @@ local RbxAnalytics = game:GetService("RbxAnalyticsService")
 -- Load whitelist data from GitHub
 local function loadWhitelistData()
     local success, data = pcall(function()
-        return loadstring(game:HttpGet("https://raw.githubusercontent.com/N9661/TechnoQuantumNebula7a2b3c/refs/heads/main/Wwwhitelist.lua"))()
+        return loadstring(game:HttpGet("https://raw.githubusercontent.com/N9661/TechnoQuantumNebula7a2b3c/refs/heads/main/whitelist.lua"))()
     end)
     
     if not success then
