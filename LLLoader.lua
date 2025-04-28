@@ -1,7 +1,7 @@
 -- Simple loader script
 local function loadWhitelistSystem()
     local success, whitelist = pcall(function()
-        return loadstring(game:HttpGet("https://raw.githubusercontent.com/N9661/TechnoQuantumNebula7a2b3c/refs/heads/main/whitelist_system.lua"))()
+        return loadstring(game:HttpGet("https://raw.githubusercontent.com/N9661/TechnoQuantumNebula7a2b3c/refs/heads/main/wwhitelist_system.lua"))()
     end)
     
     if not success then
