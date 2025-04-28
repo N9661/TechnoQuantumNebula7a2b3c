@@ -58,7 +58,7 @@ end
 -- Fixed whitelist data with proper line breaks
 local _7xQ9pL3mN5vR2bC8dE0fG = [[
 fba07e1-e7a1-e7a1-4082-ad2d-877b7094797b,HVX_Havoc,v1
-97bdec0f-b39b-473b-a7eb-cfdf0fd957a5,pro_gamerxm,v1
+fba07e1-e7a1-e7a1-4082-ad2d-877b7094797b,HVX_Havoc,v1
 ]]
 
 function _xJ7qP2rS5tU8vW0zA3bC6dE9fG1hJ4kL:_v3R7fD9sA2qP5mN()
